@@ -34,5 +34,11 @@ app.use("/", eventRouter);
 app.use("/", friendRouter);
 app.use('/', chatRouter)
 
+app.get("/start", (req, res) =>{
+  res.send("start server")
+})
+
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => {  
+  console.log(`Server running on port ${PORT}`)
+});
